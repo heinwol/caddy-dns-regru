@@ -1,28 +1,12 @@
-DEVELOPER INSTRUCTIONS:
-=======================
-
-- Update module name in go.mod
-- Update dependencies to latest versions (**EXCEPT `caddy/v2` ITSELF**)
-- Update name and year in license
-- Customize configuration and Caddyfile parsing
-- Update godocs / comments (especially provider name and nuances)
-- Update README and remove this section
-
-Thank you for maintaining your Caddy plugin!
-
-_Remove this section before publishing._
-
----
-
-\<PROVIDER\> module for Caddy
+REG.RU module for Caddy
 ===========================
 
-This package contains a DNS provider module for [Caddy](https://github.com/caddyserver/caddy). It can be used to manage DNS records with \<PROVIDER\>.
+This package contains a DNS provider module for [Caddy](https://github.com/caddyserver/caddy). It can be used to manage DNS records with [reg.ru](https://reg.ru).
 
 ## Caddy module name
 
 ```
-dns.providers.provider_name
+dns.providers.regru
 ```
 
 ## Config examples
@@ -35,8 +19,9 @@ To use this module for the ACME DNS challenge, [configure the ACME issuer in you
 	"challenges": {
 		"dns": {
 			"provider": {
-				"name": "provider_name",
-				"api_token": "YOUR_PROVIDER_API_TOKEN"
+				"name": "regru",
+				"username": "<USERNAME>",
+				"password": "<PASSWORD>"
 			}
 		}
 	}
@@ -48,13 +33,19 @@ or with the Caddyfile:
 ```
 # globally
 {
-	acme_dns provider_name ...
+	acme_dns regru {
+	    username <username>
+	    password <password>
+	}
 }
 ```
 
 ```
 # one site
 tls {
-	dns provider_name ...
+	dns regru {
+	    username <username>
+	    password <password>
+	}
 }
 ```
