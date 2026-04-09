@@ -2,6 +2,7 @@ package regru
 
 import (
 	"fmt"
+	"strings"
 
 	"github.com/caddyserver/caddy/v2"
 	"github.com/caddyserver/caddy/v2/caddyconfig/caddyfile"
@@ -66,12 +67,12 @@ func (p *Provider) UnmarshalCaddyfile(d *caddyfile.Dispenser) error {
 				if !d.NextArg() {
 					return d.ArgErr()
 				}
-				p.Provider.Username = d.Val()
+				p.Provider.Username = strings.TrimSpace(d.Val())
 			case "password":
 				if !d.NextArg() {
 					return d.ArgErr()
 				}
-				p.Provider.Password = d.Val()
+				p.Provider.Password = strings.TrimSpace(d.Val())
 			default:
 				return d.Errf("unrecognized subdirective '%s'", d.Val())
 			}
