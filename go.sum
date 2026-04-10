@@ -24,6 +24,8 @@ github.com/heinwol/libdns-regru v0.2.0 h1:3XouEn8ok16uNvMGj+YrWmJu5RCs3/doGxsgdO
 github.com/heinwol/libdns-regru v0.2.0/go.mod h1:OrpQBcJquLumVw/ro8ZH7zNU71iS7gJvnHA/aOh4wyQ=
 github.com/heinwol/libdns-regru v0.2.1 h1:Qkzt3yyVNOzeH7h5IzGQC9t7VdiknXt0aiM5bTjkV2k=
 github.com/heinwol/libdns-regru v0.2.1/go.mod h1:OrpQBcJquLumVw/ro8ZH7zNU71iS7gJvnHA/aOh4wyQ=
+github.com/heinwol/libdns-regru v0.2.2 h1:27xh1YOVS6Z6BmhkSaO+GcVBteZ8p7IDUWh0+Sq4wN0=
+github.com/heinwol/libdns-regru v0.2.2/go.mod h1:OrpQBcJquLumVw/ro8ZH7zNU71iS7gJvnHA/aOh4wyQ=
 github.com/klauspost/cpuid/v2 v2.3.0 h1:S4CRMLnYUhGeDFDqkGriYKdfoFlDnMtqTiI/sFzhA9Y=
 github.com/klauspost/cpuid/v2 v2.3.0/go.mod h1:hqwkgyIinND0mEev00jJYCxPNVRVXFQeu1XKlok6oO0=
 github.com/letsencrypt/challtestsrv v1.4.2 h1:0ON3ldMhZyWlfVNYYpFuWRTmZNnyfiL9Hh5YzC3JVwU=
