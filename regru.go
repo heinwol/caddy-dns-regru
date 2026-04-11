@@ -1,7 +1,6 @@
 package regru
 
 import (
-	"fmt"
 	"strings"
 
 	"github.com/caddyserver/caddy/v2"
@@ -28,13 +27,7 @@ func (Provider) CaddyModule() caddy.ModuleInfo {
 func (p *Provider) Provision(ctx caddy.Context) error {
 	repl := caddy.NewReplacer()
 	p.Provider.Username = repl.ReplaceAll(p.Provider.Username, "")
-	if p.Provider.Username == "" {
-		return fmt.Errorf("regru: username is required")
-	}
 	p.Provider.Password = repl.ReplaceAll(p.Provider.Password, "")
-	if p.Provider.Password == "" {
-		return fmt.Errorf("regru: password is required")
-	}
 	return nil
 }
 
